@@ -1,5 +1,5 @@
 
-## Phyton module for controlling the MIMOSIS-1 monolithic CMOS pixel detector chip via I2C
+## Python module for controlling the MIMOSIS-1 monolithic CMOS pixel detector chip via I2C
  
 Developed for single event effect testing at the GSI X0 micro-beam line. 
 Includes several read/write wrappers for direct access to general configuration, DAC, Multi Frame Emulation and readout test configuration registers.

@@ -1,5 +1,5 @@
 #####################################################
-# Phyton module for controlling MIMOSIS-1 via I2C
+# Python module for controlling MIMOSIS-1 via I2C
 # 
 # Developed for single event effect testing 
 # at GSI X0 micro-beam line. Reading selected registers 
