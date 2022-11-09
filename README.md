@@ -52,7 +52,7 @@ from smbus2 import SMBus
 
 # tested with RPi4:
 i2c = SMBus(3)
-msis1 = mimosis.Msis1(chipid=1,fread=i2c.read_byte, fwrite=i2c.write_byte )
+m = mimosis.Msis1(chipid=1,fread=i2c.read_byte, fwrite=i2c.write_byte )
 
 # optionally specify register settings as byte arrays parameter
 # by default, values in m.DAC and m.GenConf are used, see code for guidance on settings
@@ -65,17 +65,17 @@ m.writeGenConf()
 m.writeDAC()
 
 # example: enable only data output 0, set 0b10111 for all 8 ouputs
-msis1.GenConf["OUTPUT"]=0b10100 
+m.GenConf["OUTPUT"]=0b10100 
 # write new setting
 m.writeGenConf()
 
 # modify DAC default thresholds
-msis1.DAC["VCASNA"]=50
-msis1.DAC["VCASNB"]=50
-msis1.DAC["VCASNC"]=50
-msis1.DAC["VCASND"]=50
-msis1.DAC["VCASN2"]=165
-msis1.DAC["VCLIP"]=75
+m.DAC["VCASNA"]=50
+m.DAC["VCASNB"]=50
+m.DAC["VCASNC"]=50
+m.DAC["VCASND"]=50
+m.DAC["VCASN2"]=165
+m.DAC["VCLIP"]=75
 
 # write new settings
 m.writeDAC()
